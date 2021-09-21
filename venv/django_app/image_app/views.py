@@ -2,9 +2,10 @@ from django.shortcuts import render, redirect
 from django.http import HttpRequest, HttpResponse
 from datetime import datetime
 from .models import Post
-from django.views.generic import ListView, CreateView
+from django.views.generic import ListView, CreateView, DeleteView
+
 from django.urls import reverse_lazy
-from .forms import imagePostForm
+from .forms import imagePostForm, imageDeleteForm
 
 # Create your views here.
 def home(request):
@@ -28,4 +29,10 @@ class createPostView(CreateView):
     template_name = 'add_image.html'
     form_class = imagePostForm
     success_url = reverse_lazy('home')
+
+class deletePostView(DeleteView):
+    model = Post
+    template_name = 'delete_image.html'
+    success_url = reverse_lazy('home')
+    form_class = imageDeleteForm
 

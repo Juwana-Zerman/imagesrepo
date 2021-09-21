@@ -55,6 +55,13 @@
             <img src="{{ post.image.url }}" alt="{{ post.title }}" style="max-width: 250px; max-height: 250px;">
             <br />
             <br />
+            <form action="" method="POST">
+                {% csrf_token %}
+               <a href="/delete/{{ post.pk }}" class="btn btn-default btn-danger"
+                        name="delete" type="submit" value="Delete">Delete</a>
+            </form>
+
+
             {% endfor %}
     </div>
     {% endblock %}

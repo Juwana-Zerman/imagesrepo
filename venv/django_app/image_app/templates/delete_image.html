@@ -1,0 +1,20 @@
+{% extends "index.html" %}
+{% load static %}
+
+{% block title %} Delete Image {% endblock title %}
+<br />
+
+{% block content  %}
+
+<div class="container">
+    <h2>Delete An Image</h2>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <p>Are you sure you want to delete "{{ object }}"?</p>
+        <button type="submit" class="btn btn-danger" value="Confirm">Delete</button>
+    </form>
+</div>
+
+{% endblock %}
+
+{% block footer %} {% endblock %}
