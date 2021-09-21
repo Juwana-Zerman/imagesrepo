@@ -1,0 +1,18 @@
+{% extends "index.html" %}
+{% load static %}
+
+{% block title %} Add Image {% endblock title %}
+<br />
+
+{% block content  %}
+
+<div class="container">
+    <h2>Add Your Own Image</h2>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn btn-secondary">Add Image</button>
+    </form>
+</div>
+
+{% endblock %}
