@@ -27,4 +27,4 @@ jobs:
         pip install -r venv/requirements.txt
     - name: Run Tests
       run: |
-        python venv/manage.py test
+        python venv/django_app/manage.py test
