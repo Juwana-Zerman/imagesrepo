@@ -35,18 +35,27 @@
                 <li class="nav-item">
                     <a class="nav-link" href="#contact">Contact</a>
                 </li>
-                </ul>
+            </ul>
                 </div>
                 </div>
                 </nav>
                 <br />
     {% block content %}
+    <h1>Image Uploads</h1>
+     <ul>
+         {% for post in object_list %}
+         <h3>{{ post.title }}</h3>
+         <img src="{{ post.image.url }}" alt="{{ post.title }}">
+         {% endfor %}
+     </ul>
+
 
     {% endblock %}
     <br />
+    <br />
 
  <!-- Footer section -->
- <footer>
+ <!-- <footer>
      <section id="contact" class="contact-us section">
          <div class="container">
              <div class="row align-items-center">
@@ -75,9 +84,9 @@
             </section>
             <!-- End Footer Section -->
         <!-- Option 1: Bootstrap Bundle with Popper -->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+        <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous">
         </script>
-        </footer>
+        </footer> --> 
 
-        </html>
+</html>

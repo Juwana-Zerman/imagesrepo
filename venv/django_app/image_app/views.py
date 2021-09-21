@@ -1,6 +1,8 @@
 from django.shortcuts import render, redirect
 from django.http import HttpRequest, HttpResponse
 from datetime import datetime
+from .models import Post
+from django.views.generic import ListView
 
 # Create your views here.
 def home(request):
@@ -14,3 +16,7 @@ def home(request):
             'year': datetime.now().year,
         }
     )
+
+class imagePageView(ListView):
+    model = Post
+    template_name = 'index.html'

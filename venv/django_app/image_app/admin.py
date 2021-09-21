@@ -1,7 +1,7 @@
 from django.contrib import admin
 
 # Register your models here.
-from .models import imagePost
+from .models import Post
 
 
-admin.site.register(imagePost)
+admin.site.register(Post)
