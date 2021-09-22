@@ -25,10 +25,13 @@ To further enhance and build upon this app other features that could be added in
 8. If you are still in the ```venv/django_app``` directory where the ```manage.py``` file resides you can run ```python manage.py runserver``` and the app should start.
 9. You can add images from your local computer and watch them appear on the page. You can then delete them to try the functionality of the app.
 
+## Video Demo
+Video Link -- > https://youtu.be/t-1uBbiY7Kc
+
 ## Dependencies
 - Python
 - Django
 - Bootstrap
 - HTML
 - CSS
-- MySQL
+- MySQL and MySQL Workbench
